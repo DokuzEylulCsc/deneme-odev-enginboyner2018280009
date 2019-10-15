@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<title>Engin Boyner 2018280009</title>
+</head>
+<h1>Engin Boyner 2018280009</h1>
+<h2>2019 Güz Dönemi 1.Ödev</h2>
+<label for="id1">Sayı Kutusu 1</label>
+<input type='text' id='id1' onkeypress="return sayiKontrol(event)" />
+<br>
+<label for="id2">Sayı Kutusu 2</label>
+<input type='text' id='id2' onkeypress="return sayiKontrol(event)" />
+<br><br>
+<button type="button" onclick="number();">TOPLA</button> 
+<br><br>
+<script>
+     function sayiKontrol(event){    
+     if(event.keyCode != 8 && event.keyCode != 0 && (event.keyCode < 48 || event.keyCode > 57))
+        return false;
+     var frm = document.getElementById("sadece_sayi");
+     frm.setAttribute("onsubmit", true);
+     return true;
+	 }
+	 </script>
+<label for="id3">Sayı Kutusu 3</label>
+<input type='text' id='id3' />
+<br>
+<label for="id4">Sayı Kutusu 4</label>
+<input type='text' id='id4' />
+<br><br>
+<button type="button" onclick="text();">BİRLEŞTİR</button>
+</body>
+<script>
+        function number() {
+		var sayi1 = Number(parseInt(document.getElementById("id1").value));
+		var sayi2 = Number(parseInt(document.getElementById("id2").value));		
+		var x = Number(sayi1) + Number(sayi2);
+		alert(x);
+		}
+		function text() {
+		var text1 = document.getElementById("id3").value;
+		var text2 = document.getElementById("id4").value;
+		var y = text1 + text2;
+		alert(y);
+		}
+</script>
+<html>
+<head>
+<script type="text/javascript">
+    var renkler = new Array("grey","aqua");
+    document.write("<style type=text/css>body{background-color:"+ renkler[Math.round(Math.random()*2)] +";}</style>");
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Javascript Rastgele Arkaplan rengi değiştirme</title>
+</head>
+<body>
+</body>
+</html>
+<br><br>
+<font color="blue">(Kaynaklar: developer.mozilla.org , yazilimkodlama.com , youtube.com/watch?v=nYQFLBeEUZE, koddunyasi.net)</font>
+</html>	
